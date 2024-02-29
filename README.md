@@ -58,11 +58,38 @@ FIGURE-02
 
 FIGURE -03
 
+![Screenshot 2024-02-14 230015](https://github.com/Vishnx001/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/134037148/4e6861b7-b728-46d5-9e84-120da6dcaf63)
 
 
 
 ## PROGRAM 
- 
+ ```c++
+int led = 4;
+int pushbutton = 3;
+void setup()
+{
+	pinMode(led, OUTPUT);
+	pinMode(pushbutton,INPUT);
+}
+void loop()
+{
+	int pb;
+	pb=digitalRead(pushbutton);
+	if(pb==HIGH)
+	{
+		digitalWrite(led, HIGH);
+		// Wait for 1000 millisecond(s)
+		delay(500);
+		digitalWrite(led,LOW);
+		delay(500);
+		// Wait for 1000 millisecond(s)
+	}
+	else{
+		delay(500);
+		digitalWrite(led,LOW);
+	}
+}
+```
  
 
 
@@ -81,5 +108,6 @@ FIGURE -03
 
 ## OUTPUT OF SIMULATION :
 
-[My image](username.github.com/repository/img/image.jpg)
+![Screenshot 2024-02-14 231904](https://github.com/Vishnx001/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/134037148/7a2f9972-7a25-436e-9eaa-be0877eede2b)
+
 
